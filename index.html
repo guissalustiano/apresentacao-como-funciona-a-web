@@ -15,176 +15,115 @@
 </div>
 
 <!-- Some images that are fixed to background in the css -->
-<img id="applepie-image" class="bg" src="images/6296334551_b3d5c27823_b.png">
-<img id="icecream-image" class="bg" src="images/35535918670_f1d12627ff_o.png">
-<img id="crisps-image" class="bg" src="images/6636957665_5e7c4a79de_o.png">
-
-
 
 <div id="impress" data-transition-duration="1000">
 
-    <div class="step" data-scale="2" data-x="-500" data-y="-500">
-        <h1>2D navigation</h1>
+    <section class="step center" data-scale="2" data-x="-500" data-y="-500">
+        <h1>Web Scrapper com BS4</h1>
+    </section>
+    
+    <section class="step center" data-scale="2" data-rel-x="0" data-rel-y="1200">
+        <h1>Como a web funciona?</h1>
+    </section>
+
+    <section class="step" data-rel-x="2000" data-rel-y="0" data-scale="1">
+        <h1>Arquitetura Cliente-Servidor</h1>
 
         <ul>
-        <li>Impress.js allows you to layout your presentation in a 3D space</li>
-        <li>Now <a href="https://github.com/impress/impress.js/tree/master/src/plugins/goto">the
-           goto plugin</a> also allows you to specify
-           non-linear navigation!</li>
-        <li>This demo can be navigated by
-            <ul>
-            <li>continuously pressing Right Arrow</li>
-            <li>continuously pressing Down Arrow</li>
-            <li>(or freely, pressing Up, Down, Right, Left as you choose)</li>
-            </ul>
-        </li>
-        <li>It's up to you to decide which is the better structure</li>
-        </ul>
-    </div>
-
-    <div id="contents" class="step" data-rel-x="1500" data-rel-y="1500" data-scale="1">
-        <h1>Choosing a treat</h1>
-
-        <ul>
-            <li>You can choose your preferred treat from:
+            <li>Um pouco de historia
                 <ul>
-                <li>Ice cream</li>
-                <li>Crisps</li>
-                <li>Apple pie</li>
+                    <li>Terminais burros</li>
+                    <li>Compartilhamento de processamento com computadores pessoais</li>
+                    <!-- Servidor trata os dados e o cliente recupera esses dados,
+                        realizando processamento adicional sobre ele e gerenciando
+                        sua exibicao -->
+                    <li>Web com browsers e servidores</li>
                 </ul>
             </li>
-            <li>We will make a structured pro's &amp; con's analysis to arrive at a conclusion</li>
         </ul>
-    </div>
+        <!-- exemplo com um pedido no BK
+            Vc e' o clinte, pede uma hamburger
+            O jeito que o papel e' escrito e' o http
+            Uma papel com o pedido  e' colocado na cordinah
+            O servidor lida com varios pedidos ao msm tempo e vai resolvendo e devolvendo o pedido (response)
+        -->
+        <img width="400" src="images/clientServerModel.jpg">
+    </section>
 
-    <!-- Ice cream slides (3) -->
-    <div id="icecream" class="step" data-x="2000" data-y="2000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="contents icecream-pro contents crisps">
-        <h1>Ice cream</h1>
-
+    <!-- Detalhamento da requisicao -->
+    <section class="step center" data-rel-x="1500" data-rel-y="0" data-rotate="-15" data-scale="1">
+        <h1 style="margin-bottom: 0.5em">A requisicao http</h1>
+        <!-- e' so texto -->
+        <img style="margin-bottom:0.8em" src="images/http-request.png" />
+        <img src="images/http-response.png" />
+        <!-- analise com o dev tools -->
+        <!--
         <ul>
-            <li>Cold</li>
-            <li>Creamy</li>
-            <li>Vanilla or flavored</li>
-            <li>Caramel sauce, jams &amp; other toppings</li>
+            <li> Methodos HTTP</li>
+            <li> Criptografia com https </li>
         </ul>
-    </div>
+        -->
+    </section>
 
-    <div id="icecream-pro" class="step" data-rel-x="0" data-rel-y="1000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="icecream icecream-con applepie crisps-pro">
-        <h1>Ice cream: Pro's</h1>
+    <section class="step center" data-rel-x="1500" data-rel-y="-1000" data-rotate="-30" data-scale="1">
+        <h1>A Trindade da web</h1>
+        <!-- Se e' tudo texto como a gente ve oq ve? -->
+        <img src="images/trindadeWeb.png" />
+    </section>
 
+    <section id="html" class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+        <h1>HTML</h1>
         <ul>
-            <li>Great for dessert or snack</li>
-            <li>Great in the Summer</li>
+            <li> Padronizado pela W3C</li>
+            <li> Versão atual: 5.2 2017 </li>
+            <li> 
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">
+                    Muitas tags
+                </a>
+            </li>
+            <li> Mais props ainda (id, src, ...) </li>
         </ul>
-    </div>
+    </section>
 
+    <section class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+        <h1>DOM</h1>
+        <img src="images/DOM.svg" />
+        <!-- Pequena demostracao:
+            // back last slide
+            const slide = document.getElementById("html")
+            slide.children // show children
+            const ulist = slite.children[1]
+            ulist.children // show 3 il
+            const ulist.children[2]
+        -->
+    </section>
 
-    <div id="icecream-con" class="step" data-rel-x="0" data-rel-y="1000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="icecream-pro crisps applepie-pro crisps-con">
-        <h1>Ice cream: Con's</h1>
+    <section id="css" class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+        <h1>CSS</h1>
 
-        <ul>
-            <li>Not so great in the Winter</li>
-            <li>If you're allergic to lactose/milk</li>
-            <li>Diet alternatives are not real ice cream</li>
+        <span> Oi! Eu sou um singelo texto</span>
+        <pre><code>
+section &gt; span { color: black; }
+.estilo { color: red; }
+#singelo { color: green; }
+        </code></pre>
+
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank"> Referencia </a>
+    </section>
+
+    <section id="js" class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+        <h1>Javascript</h1>
+        <ul id="list">
+            <li>Element Estatico❌</li>
         </ul>
-    </div>
-
-
-    <!-- Crisps slides (3) -->
-    <div id="crisps" class="step" data-x="3500" data-y="2000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="icecream-con crisps-pro icecream applepie">
-        <h1>Crisps</h1>
-
-        <ul>
-            <li>Potatoes fried in oil and salted</li>
-            <li>Various flavors</li>
-            <li>Dips</li>
-            <li>Can be used as ingredient in subs (Cliff Huxtable style)</li>
-        </ul>
-    </div>
-
-    <div id="crisps-pro" class="step" data-rel-x="0" data-rel-y="1000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="crisps crisps-con icecream-pro applepie-pro">
-        <h1>Crisps: Pro's</h1>
-
-        <ul>
-            <li>Simple yet tasty concept</li>
-            <li>Great for snack</li>
-            <li>Salty / spicy (not sweet)</li>
-            <li>Finger food</li>
-            <li>Diet alternatives are often ok</li>
-        </ul>
-    </div>
-
-
-    <div id="crisps-con" class="step" data-rel-x="0" data-rel-y="1000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="crisps-pro applepie icecream-con applepie-con">
-        <h1>Crisps: Con's</h1>
-
-        <ul>
-            <li>Commonly not used as dessert</li>
-            <li>Not sweet</li>
-        </ul>
-    </div>
-
-
-    <!-- Apple pie slides (3) -->
-    <div id="applepie" class="step" data-x="5000" data-y="2000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="crisps-con applepie-pro crisps icecream-pro">
-        <h1>Apple pie</h1>
-
-        <ul>
-            <li>Apple's in a pie</li>
-            <li>Many recipes exist. (Grandma's is the best.)</li>
-            <li>Vanilla sauce or cream on top</li>
-        </ul>
-    </div>
-
-    <div id="applepie-pro" class="step" data-rel-x="0" data-rel-y="1000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="applepie applepie-con crisps-pro icecream-con">
-        <h1>Apple pie: Pro's</h1>
-
-        <ul>
-            <li>Great for dessert</li>
-            <li>Or just with a cup of tea or glass of milk</li>
-            <li>Best when warm</li>
-        </ul>
-    </div>
-
-
-    <div id="applepie-con" class="step" data-rel-x="0" data-rel-y="1000"
-         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-         data-goto-next-list="applepie-pro conclusion crisps-con conclusion">
-        <h1>Apple pie: Con's</h1>
-
-        <ul>
-            <li>I'm allergic to apple (but a small slice is worth it)</li>
-            <li>Not finger food</li>
-        </ul>
-    </div>
-
-
-    <div id="conclusion" class="step" data-rel-x="1000" data-rel-y="1000">
-        <h1>Conclusion</h1>
-
-        <p>Can I choose all three ;-)</p>
-
-        <p style="font-size: small; position: absolute; bottom: 30px; left: 300px;" id="image-credits"
-        >Image credits: <a href="https://www.flickr.com/photos/reimagingerica/35535918670">reimagingerica@Flickr</a>, 
-                        <a href="https://www.flickr.com/photos/mixedmolly/6636957665">mixedmolly@Flickr</a>,
-                        <a href="https://www.flickr.com/photos/stevepj2009/6296334551">stevepj2009@Flickr</a> </p>
-    </div>
+        <pre><code>
+const list = document.getElementById("list")
+const el = document.createElement("li")
+el.textContent = "Gerado dinamicamente ✅"
+list.appendChild(el)
+        </code></pre>
+        <a href="https://www1.folha.uol.com.br/colunas/atila-iamarino/2020/09/a-deriva-e-contando-com-deus.shtml" target="_blank">Util</a>
+    </section>
 
     <div id="overview" class="step" data-x="3000" data-y="2000" data-scale="9" style="pointer-events: none;">
     </div>
@@ -202,3 +141,8 @@
 
 </body>
 </html>
+
+<!-- Reference:
+https://www.scienceabc.com/innovation/exactly-happens-visit-website.html
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works
+->
