@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Desserts (2D navigation demo)</title>
+    <title>Como a web funciona</title>
     <meta name="description" content="2D navigation demo" />
     <meta name="author" content="Henrik Ingo" />
     <link href="./base/css/impress-common.css" rel="stylesheet" />
@@ -18,15 +18,15 @@
 
 <div id="impress" data-transition-duration="1000">
 
-    <section class="step center" data-scale="2" data-x="-500" data-y="-500">
+    <section class="step center" data-scale="2" data-x="0" data-y="0">
         <h1>Web Scrapper com BS4</h1>
     </section>
     
-    <section class="step center" data-scale="2" data-rel-x="0" data-rel-y="1200">
+    <section class="step center" data-scale="2" data-x="0" data-y="1200">
         <h1>Como a web funciona?</h1>
     </section>
 
-    <section class="step" data-rel-x="2000" data-rel-y="0" data-scale="1">
+    <section class="step" data-x="0" data-y="3000" data-rotate="180" data-scale="1">
         <h1>Arquitetura Cliente-Servidor</h1>
 
         <ul>
@@ -51,7 +51,8 @@
     </section>
 
     <!-- Detalhamento da requisicao -->
-    <section class="step center" data-rel-x="1500" data-rel-y="0" data-rotate="-15" data-scale="1">
+    <!-- data-y=cos(30)*3000 data-x=sin(30)*3000 -->
+    <section class="step center" data-x="-1500" data-y="2598" data-rotate="210" data-scale="1">
         <h1 style="margin-bottom: 0.5em">A requisicao http</h1>
         <!-- e' so texto -->
         <img style="margin-bottom:0.8em" src="images/http-request.png" />
@@ -65,13 +66,13 @@
         -->
     </section>
 
-    <section class="step center" data-rel-x="1500" data-rel-y="-1000" data-rotate="-30" data-scale="1">
+    <section class="step center" data-x="0" data-y="-3000" data-rotate="0" data-scale="1">
         <h1>A Trindade da web</h1>
         <!-- Se e' tudo texto como a gente ve oq ve? -->
         <img src="images/trindadeWeb.png" />
     </section>
 
-    <section id="html" class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+    <section id="html" class="step center" data-x="-1500" data-y="-2598" data-rotate="-30" data-scale="1">
         <h1>HTML</h1>
         <ul>
             <li> Padronizado pela W3C</li>
@@ -85,7 +86,7 @@
         </ul>
     </section>
 
-    <section class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+    <section class="step center" data-x="-2598" data-y="-1500" data-rotate="-60" data-scale="1">
         <h1>DOM</h1>
         <img src="images/DOM.svg" />
         <!-- Pequena demostracao:
@@ -98,7 +99,7 @@
         -->
     </section>
 
-    <section id="css" class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+    <section id="css" class="step center" data-x="1500" data-y="-2598" data-rotate="30" data-scale="1">
         <h1>CSS</h1>
 
         <span> Oi! Eu sou um singelo texto</span>
@@ -111,7 +112,7 @@ section &gt; span { color: black; }
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank"> Referencia </a>
     </section>
 
-    <section id="js" class="step center" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+    <section id="js" class="step center" data-x="2598" data-y="-1500" data-rotate="60" data-scale="1">
         <h1>Javascript</h1>
         <ul id="list">
             <li>Element Estatico❌</li>
@@ -125,7 +126,7 @@ list.appendChild(el)
         <a href="https://www1.folha.uol.com.br/colunas/atila-iamarino/2020/09/a-deriva-e-contando-com-deus.shtml" target="_blank">Util</a>
     </section>
 
-    <div id="overview" class="step" data-x="3000" data-y="2000" data-scale="9" style="pointer-events: none;">
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="9" style="pointer-events: none;">
     </div>
 </div>
 
